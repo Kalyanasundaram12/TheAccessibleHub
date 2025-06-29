@@ -1,0 +1,152 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  :root {
+    /* This is now the 'Technical Theme', and will be the default */
+    --background: 210 15% 20%; /* Dark cool gray e.g. #2C3238 */
+    --foreground: 210 15% 85%; /* Light gray/off-white e.g. #D2D8DD */
+
+    --card: 210 15% 25%; /* Slightly lighter dark gray e.g. #384047 */
+    --card-foreground: 210 15% 85%; /* Same as main foreground */
+
+    --popover: 210 15% 18%; /* Darker for popovers */
+    --popover-foreground: 210 15% 85%;
+
+    --primary: 200 70% 50%; /* Vibrant Blue e.g. #29A3CC */
+    --primary-foreground: 210 15% 10%; /* Dark text for contrast on vibrant blue */
+
+    --secondary: 210 15% 30%; /* A bit lighter than card e.g. #454E56 */
+    --secondary-foreground: 210 15% 85%;
+
+    --muted: 210 15% 35%;  /* A bit lighter than secondary e.g. #515A63 */
+    --muted-foreground: 210 15% 70%; /* Slightly darker muted text */
+
+    --accent: 160 70% 45%; /* Teal/Greenish e.g. #24B58F */
+    --accent-foreground: 210 15% 10%; /* Dark text for contrast on accent */
+
+    --destructive: 0 70% 50%; /* A strong red */
+    --destructive-foreground: 0 0% 100%; /* White text */
+
+    --border: 210 15% 30%; /* Using secondary as border base */
+    --input: 210 15% 28%; /* Similar to card/secondary */
+    --ring: 200 70% 55%; /* Primary, slightly lighter for ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors for the 'Technical Theme' (default) */
+    --sidebar-background: 210 15% 18%; 
+    --sidebar-foreground: 210 15% 80%; 
+    --sidebar-primary: 200 70% 50%; 
+    --sidebar-primary-foreground: 210 15% 10%; 
+    --sidebar-accent: 160 70% 45%; 
+    --sidebar-accent-foreground: 210 15% 10%; 
+    --sidebar-border: 210 15% 25%; 
+    --sidebar-ring: 200 70% 55%;
+
+    --font-size-base: 16px;
+  }
+
+  .dark {
+    /* This is now the "Vibrant Blue" theme, formerly the default :root theme */
+    --background: 210 17% 10%; /* e.g. #171B1F - Very dark blue/gray */
+    --foreground: 220 17% 95%; /* e.g. #F0F1F5 - Light gray/off-white */
+
+    --card: 210 17% 12%; /* e.g. #1A1F24 - Slightly lighter than background */
+    --card-foreground: 220 17% 95%; /* Same as main foreground */
+
+    --popover: 210 17% 12%; /* Same as card for popovers */
+    --popover-foreground: 220 17% 95%;
+
+    --primary: 200 70% 55%; /* e.g. #3BACE2 - Vibrant Blue, adjusted for dark mode */
+    --primary-foreground: 210 17% 10%; /* Dark text for contrast on vibrant blue */
+
+    --secondary: 210 17% 20%; /* e.g. #2C333B - A bit lighter than card */
+    --secondary-foreground: 220 17% 95%;
+
+    --muted: 210 17% 25%;  /* e.g. #38404A - A bit lighter than secondary */
+    --muted-foreground: 220 17% 70%; /* Slightly darker muted text */
+
+    --accent: 160 70% 50%; /* e.g. #29B58F - Teal/Greenish, adjusted for dark mode */
+    --accent-foreground: 210 17% 10%; /* Dark text for contrast on accent */
+
+    --destructive: 0 62.8% 30.6%; /* e.g. #9A2A2A - Darker red */
+    --destructive-foreground: 0 0% 98%; /* Near white text */
+
+    --border: 210 17% 25%; /* Using muted as border base */
+    --input: 210 17% 22%; /* Similar to secondary */
+    --ring: 200 70% 60%; /* Primary, slightly lighter for ring */
+    
+    /* Sidebar colors for the "Vibrant Blue" theme (now under .dark) */
+    --sidebar-background: 210 17% 12%; 
+    --sidebar-foreground: 220 17% 95%; 
+    --sidebar-primary: 200 70% 55%; 
+    --sidebar-primary-foreground: 210 17% 10%; 
+    --sidebar-accent: 160 70% 50%; 
+    --sidebar-accent-foreground: 210 17% 10%; 
+    --sidebar-border: 210 17% 25%; 
+    --sidebar-ring: 200 70% 60%; 
+  }
+
+  .high-contrast {
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White */
+
+    --card: 0 0% 10%; /* Dark grey */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 60 100% 50%; /* Bright Yellow */
+    --primary-foreground: 0 0% 0%; /* Black */
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 200 100% 50%; /* Bright Cyan */
+    --accent-foreground: 0 0% 0%; /* Black */
+
+    --destructive: 0 100% 50%; /* Bright Red */
+    --destructive-foreground: 0 0% 0%; /* Black */
+
+    --border: 0 0% 40%;
+    --input: 0 0% 15%;
+    --ring: 60 100% 50%; /* Bright Yellow */
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 60 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 200 100% 50%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 40%;
+    --sidebar-ring: 60 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-size: var(--font-size-base);
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply transition-colors duration-300;
+  }
+  .font-scale-sm { font-size: 0.875rem; } /* 14px */
+  .font-scale-md { font-size: 1rem; } /* 16px */
+  .font-scale-lg { font-size: 1.125rem; } /* 18px */
+  .font-scale-xl { font-size: 1.25rem; } /* 20px */
+}
