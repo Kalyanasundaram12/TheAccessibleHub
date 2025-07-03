@@ -31,11 +31,12 @@ export interface Resource {
 }
 
 export interface TeamMember {
+  linkedinUrl: any;
   id: string;
   name: string;
   role: string;
   bio: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageHint?: string;
 }
 export interface Testimonial {

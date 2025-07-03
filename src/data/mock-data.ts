@@ -148,7 +148,8 @@ export const mockTeamMembers: TeamMember[] = [
     role: 'Gold MLSA',
     bio: 'Deepthi is passionate about making AI understandable and beneficial for everyone. She specializes in AI ethics and responsible innovation.',
     imageUrl: '/deepthi.jpg',
-    imageHint: 'portrait woman'
+    imageHint: 'portrait woman',
+    linkedinUrl: 'https://www.linkedin.com/in/deepthibalasubramanian'
   },
   {
     id: 'team-2',
@@ -156,7 +157,8 @@ export const mockTeamMembers: TeamMember[] = [
     role: 'Gold MLSA',
     bio: 'Kalyan has extensive experience in developing and deploying machine learning models. He focuses on practical applications of AI.',
     imageUrl: '/kalyan.jpg',
-    imageHint: 'portrait man'
+    imageHint: 'portrait man',
+    linkedinUrl: 'https://www.linkedin.com/in/kalyanasundaram-v-48b21a229'
   },
   {
     id: 'team-3',
@@ -164,7 +166,8 @@ export const mockTeamMembers: TeamMember[] = [
     role: 'Beta MLSA',
     bio: 'Leerish ensures our community is inclusive and accessible. He champions user-friendly design and clear communication.',
     imageUrl: '/leerish.jpg',
-    imageHint: 'portrait person'
+    imageHint: 'portrait person',
+    linkedinUrl: 'https://www.linkedin.com/in/leerish-arvind'
   },
 ];
 export const mockAssociates: TeamMember[] = [
@@ -173,8 +176,7 @@ export const mockAssociates: TeamMember[] = [
     name: 'Keerthi AJ',
     role: 'MLSA Beta',
     bio: 'Keerthi is a Beta MLSA and an Associate at The Accessible AI Hub',
-    imageUrl: '/Keerthi.jpg',
-    imageHint: 'portrait woman scientist'
+    linkedinUrl: 'https://www.linkedin.com/in/keerthi-avirneni-91354824a'
   },
   // {
   //   id: 'assoc-2',
