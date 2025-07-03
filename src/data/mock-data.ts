@@ -11,7 +11,7 @@ export const mockEvents: Event[] = [
     youtubeViewCount: 15,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/brainstorm-your-first-ai-class-kickstarting-your-ai-journey-48c3', type: 'blog' },
-      { name: 'Access the Deck', url: '#', type: 'ppt' },
+      { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/deepthi_balasubramanian_studentambassadors_com/EYF6K__fpn5NpE6juwSKQpUBqJI7QNsnzKYGaTJuSNcctw', type: 'ppt' },
     ],
     tags: ['Explainable AI', 'Beginner', 'Workshop'],
     imageUrl: '/logo.jpg',
@@ -42,10 +42,42 @@ export const mockEvents: Event[] = [
     youtubeVideoId: 'T9UTsU4S11M',
     youtubeViewCount: 10,
     resources: [
-      { name: 'Read the Blog', url: '#', type: 'blog' },
+      { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/how-genai-gets-smarter-the-power-of-context-with-rag-313h', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EXHxx0j5K9dLt6XuW5BzPpwBPm9BhtDqN2Yr8qGjF2p7MA?e=XoClQd', type: 'ppt' },
     ],
     tags: ['GenAI', 'Past Event', 'Tech Talk'],
+    imageUrl: '/logo.jpg',
+    imageHint: 'language processing'
+  },
+  {
+    id: 'event-4',
+    title: 'Data Cleaning 101',
+    date: '2025-06-28',
+    description: '🧠 Introduction to Data | Data Cleaning From Scratch - Episode 4 ',
+    longDescription: 'Episode 4 of "Data Cleaning From Scratch" dives into the fundamentals of data what it is types, and why its crucial.This episode lays the groundwork for understanding why clean, accurate data is essential for analysis, decision-making, and building reliable machine learning models.This video is for beginners who want to get started in Data Cleaning',
+    youtubeVideoId: '9CAG4Szod3U',
+    youtubeViewCount: 12,
+    resources: [
+      { name: 'Read the Blog', url: '#', type: 'blog' },
+      { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/Ef4DkMKC1vlPmrX8Dohuy-0BaG5ap9APB4SQDwJS6jbWKQ?e=09A1pV', type: 'ppt' },
+    ],
+    tags: ['Data', 'Past Event', 'Tech Talk'],
+    imageUrl: '/logo.jpg',
+    imageHint: 'language processing'
+  },
+  {
+    id: 'event-5',
+    title: 'No Code ML Made with Clipchamp',
+    date: '2025-07-02',
+    description: '🧠 Introduction to No Code | NO Code ML From Scratch - Episode 5 ',
+    longDescription: 'Build your first machine learning model without writing a single line of code using Azure Machine Learning Studio! In this quick guide, we’ll show you how to upload data, train a model, and deploy it – all through a simple drag-and-drop interface.This video is for beginners who want to get started in No Code',
+    youtubeVideoId: 'X4-U1Pc3gk4',
+    youtubeViewCount: 13,
+    resources: [
+      { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/smart-vision-no-code-app-dev-without-writing-a-single-line-5dpm', type: 'blog' },
+      { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/leerish_arvind_studentambassadors_com/EaVP_Q_vAKJFlKL9rcccrrkB9ONnx82gB2f-Z7moZuB5VQ?e=EW3Xk7', type: 'ppt' },
+    ],
+    tags: ['Machine Learning', 'Past Event', 'Tech Talk'],
     imageUrl: '/logo.jpg',
     imageHint: 'language processing'
   },
@@ -57,7 +89,7 @@ export const mockResources: Resource[] = [
     title: 'Session 1 : Brainstorm - First AI Class',
     description: 'A comprehensive guide for beginners to understand the fundamentals of Artificial Intelligence.',
     category: 'AI Basics',
-    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/deepthi_balasubramanian_studentambassadors_com/EYJ3FWil_jpLmcWcNe1tPc0ByUM0ilnWVDyxC3zj8EGUnA?e=XAQIZj',
+    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/deepthi_balasubramanian_studentambassadors_com/EYF6K__fpn5NpE6juwSKQpUBqJI7QNsnzKYGaTJuSNcctw',
     type: 'ppt',
     tags: ['AI', 'Beginner', 'Fundamentals'],
     imageUrl: '/Banner1.png',
@@ -85,17 +117,28 @@ export const mockResources: Resource[] = [
     imageUrl: '/Banner3.png',
     imageHint: 'text analysis'
   },
-  // {
-  //   id: 'res-4',
-  //   title: 'Understanding Neural Networks',
-  //   description: 'An introductory article explaining how neural networks work.',
-  //   category: 'ML Basics',
-  //   downloadUrl: '#',
-  //   type: 'article',
-  //   tags: ['Neural Networks', 'Deep Learning', 'Beginner'],
-  //   imageUrl: '/logo.jpg',
-  //   imageHint: 'network diagram'
-  // },
+  {
+    id: 'res-4',
+    title: 'Data Cleaning 101',
+    description: 'A comprehensive guide for beginners to understand the fundamentals of Data Cleaning.',
+    category: 'ML Basics',
+    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/Ef4DkMKC1vlPmrX8Dohuy-0BaG5ap9APB4SQDwJS6jbWKQ?e=09A1pV',
+    type: 'ppt',
+    tags: ['Data Cleaning', 'Machine Learning', 'Beginner'],
+    imageUrl: '/Banner4.png',
+    imageHint: 'network diagram'
+  },
+    {
+    id: 'res-5',
+    title: 'No Code ML Made with Clipchamp',
+    description: 'A comprehensive guide for beginners to understand the fundamentals of No Code ML',
+    category: 'ML Basics',
+    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/leerish_arvind_studentambassadors_com/EaVP_Q_vAKJFlKL9rcccrrkB9ONnx82gB2f-Z7moZuB5VQ?e=EW3Xk7',
+    type: 'ppt',
+    tags: ['Data Cleaning', 'Machine Learning', 'Beginner'],
+    imageUrl: '/Banner5.png',
+    imageHint: 'Hi diagram'
+  },
 ];
 
 export const mockTeamMembers: TeamMember[] = [
