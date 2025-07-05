@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
@@ -17,8 +18,8 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
             <Image
               src={member.imageUrl}
               alt={member.name}
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
               data-ai-hint={member.imageHint || "portrait person"}
             />
           </div>

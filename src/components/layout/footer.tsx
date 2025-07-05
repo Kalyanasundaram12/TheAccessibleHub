@@ -11,9 +11,19 @@ export function Footer() {
   const [totalDownloads, setTotalDownloads] = useState(0);
 
   useEffect(() => {
-    incrementSiteView();
-    setSiteViews(getSiteViews());
-    setTotalDownloads(getTotalResourceDownloads());
+    const fetchAndSetCounts = async () => {
+      // We don't need to wait for this to complete to show the initial counts,
+      // so we call it without await.
+      incrementSiteView(); 
+      
+      const views = await getSiteViews();
+      const downloads = await getTotalResourceDownloads();
+      
+      setSiteViews(views);
+      setTotalDownloads(downloads);
+    };
+
+    fetchAndSetCounts();
   }, []);
 
   return (

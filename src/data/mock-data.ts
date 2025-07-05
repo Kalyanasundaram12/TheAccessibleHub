@@ -58,7 +58,7 @@ export const mockEvents: Event[] = [
     youtubeVideoId: '9CAG4Szod3U',
     youtubeViewCount: 12,
     resources: [
-      { name: 'Read the Blog', url: '#', type: 'blog' },
+      { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/clean-data-clear-insights-your-first-step-into-data-science-3p25', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/Ef4DkMKC1vlPmrX8Dohuy-0BaG5ap9APB4SQDwJS6jbWKQ?e=09A1pV', type: 'ppt' },
     ],
     tags: ['Data', 'Past Event', 'Tech Talk'],
@@ -178,14 +178,14 @@ export const mockAssociates: TeamMember[] = [
     bio: 'Keerthi is a Beta MLSA and an Associate at The Accessible AI Hub',
     linkedinUrl: 'https://www.linkedin.com/in/keerthi-avirneni-91354824a'
   },
-  // {
-  //   id: 'assoc-2',
-  //   name: 'Katherine Johnson',
-  //   role: 'Data Science Associate',
-  //   bio: 'Katherine assists with complex data analysis and computational projects, ensuring accuracy and reliability in our findings.',
-  //   imageUrl: 'https://placehold.co/300x300.png',
-  //   imageHint: 'portrait woman mathematician'
-  // },
+  {
+    id: 'assoc-2',
+    name: 'Kavala Sri Lakshmi Sanjana',
+    role: 'MLSA Beta',
+    bio: 'Sanjana is a Beta MLSA and an Associate at The Accessible AI Hub',
+    linkedinUrl: 'https://www.linkedin.com/in/kavala-sri-lakshmi-sanjana'
+  },
+  
 ];
 export const mockTestimonials: Testimonial[] = [
   // {

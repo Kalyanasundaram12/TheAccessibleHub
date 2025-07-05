@@ -3,14 +3,14 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CalendarDays, Download, Youtube, Tag, Sparkles, PlusCircle, TextQuote, Eye , Book} from 'lucide-react';
+import { CalendarDays, Download, Youtube, Tag, Sparkles, PlusCircle, TextQuote, Eye } from 'lucide-react';
 import type { Event, EventResource } from '@/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { YouTubeEmbed } from '@/components/ui/youtube-embed';
 import { Separator } from '../ui/separator';
-import { trackDownload } from '@/lib/tracking';
+import { incrementDownloadCount } from '@/lib/tracking';
 import { useState, useEffect } from 'react';
 import { suggestEventTags } from '@/ai/flows/suggest-event-tags';
 import { summarizeContent } from '@/ai/flows/summarize-content-flow';
@@ -41,13 +41,14 @@ export function EventCard({ event, featured = false }: EventCardProps) {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
     }));
     setIsEventUpcoming(date > new Date());
   }, [event.date]);
 
   const handleResourceDownloadClick = (resource: EventResource) => {
-    const resourceId = `${event.id}-${resource.name.replace(/\s+/g, '-')}`;
-    trackDownload(resourceId, resource.type);
+    incrementDownloadCount();
   };
 
   const handleSuggestAiTags = async () => {
@@ -107,8 +108,8 @@ export function EventCard({ event, featured = false }: EventCardProps) {
           <Image
             src={event.imageUrl}
             alt={event.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             data-ai-hint={event.imageHint || "event image"}
           />
         </div>
@@ -151,7 +152,7 @@ export function EventCard({ event, featured = false }: EventCardProps) {
 
         {event.resources && event.resources.length > 0 && !featured && (
           <div>
-            <h3 className="text-md font-semibold mb-2 flex items-center"><Book className="mr-2 h-5 w-5"/>Further Reading</h3>
+            <h3 className="text-md font-semibold mb-2 flex items-center"><Download className="mr-2 h-5 w-5"/> Resources</h3>
             <ul className="space-y-1">
               {event.resources.map((resource, index) => (
                 <li key={index}>
@@ -162,7 +163,7 @@ export function EventCard({ event, featured = false }: EventCardProps) {
                       rel="noopener noreferrer"
                       onClick={() => handleResourceDownloadClick(resource)}
                     >
-                      {resource.name} 
+                      {resource.name} ({resource.type.toUpperCase()})
                     </Link>
                   </Button>
                 </li>

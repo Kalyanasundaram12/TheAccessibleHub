@@ -8,7 +8,7 @@ import type { Resource } from '@/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { trackDownload } from '@/lib/tracking';
+import { incrementDownloadCount } from '@/lib/tracking';
 import { useState, type FC } from 'react';
 import { suggestResourceTags } from '@/ai/flows/suggest-resource-tags';
 import { summarizeContent } from '@/ai/flows/summarize-content-flow';
@@ -29,7 +29,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
   const [isSummarizing, setIsSummarizing] = useState(false);
 
   const handleDownloadClick = () => {
-    trackDownload(resource.id, resource.type);
+    incrementDownloadCount();
   };
 
   const handleSuggestAiTags = async () => {
@@ -86,8 +86,8 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           <Image
             src={resource.imageUrl}
             alt={resource.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             data-ai-hint={resource.imageHint || "resource abstract"}
           />
         </div>
