@@ -94,7 +94,7 @@ export const mockEvents: Event[] = [
   {
     id: 'event-7',
     title: 'AI that understands human language',
-    date: '2025-07-8',
+    date: '2025-07-08',
     description: '🧠 Introduction to NLP | AI With NLP - Episode 7 ',
     longDescription: 'Ever wondered how Alexa understands you? Or how ChatGPT can talk like a human? In this video, we’re diving into the magical world of Natural Language Processing (NLP) — the AI that bridges language and machines! It covers Key concepts in NLP . Perfect for students, AI newbies, and tech enthusiasts curious about the power behind language-driven AI tools.',
     youtubeVideoId: 'Sd0rNiY2TnA',
