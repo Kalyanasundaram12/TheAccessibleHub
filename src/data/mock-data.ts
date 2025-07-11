@@ -8,7 +8,6 @@ export const mockEvents: Event[] = [
     description: '🧠 Introduction to Artificial Intelligence | AI From Scratch - Episode 1',
     longDescription: 'Welcome to the first episode of our AI From Scratch series — your go-to guide to understand the world of Artificial Intelligence (AI) from the ground up Whether you are a working professional from a non-tech background, a college student, or just curious about how AI works — this video is tailored for absolute beginners who want to get started in AI.',
     youtubeVideoId: 'N81kTrGxvKA',
-    youtubeViewCount: 15,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/brainstorm-your-first-ai-class-kickstarting-your-ai-journey-48c3', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/deepthi_balasubramanian_studentambassadors_com/EYF6K__fpn5NpE6juwSKQpUBqJI7QNsnzKYGaTJuSNcctw', type: 'ppt' },
@@ -24,7 +23,6 @@ export const mockEvents: Event[] = [
     description: '🧠 Introduction to SDLC | SDLC From Scratch - Episode 2',
     longDescription: 'Explore the evolution from traditional Software Development Life Cycle (SDLC) methods to cutting-edge Smart Development practices, including AI-driven tools and agile automation. Gain insights into how modern tech is reshaping software engineering for speed, quality, and innovation .This video is for beginners who want to get started in SDLC.',
     youtubeVideoId: 'naJgQSmA1Go',
-    youtubeViewCount: 10,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/from-waterfall-to-agile-reimagining-the-sdlc-with-azure-ai-48bc', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EU6ha17mKwJApCginTDyYbQBuAO2et8hDj_BsFsO9ffhdg?e=gqKOW1', type: 'ppt' },
@@ -40,7 +38,6 @@ export const mockEvents: Event[] = [
     description: '🧠 Introduction to GenAI | GenAI From Scratch - Episode 3 ',
     longDescription: 'The talk focused on recent breakthroughs in Generative AI (GenAI) and their growing influence across key industries such as healthcare, education, and creative work. In healthcare, GenAI is enabling faster diagnostics, supporting drug discovery. This video is for beginners who want to get started in GenAI.',
     youtubeVideoId: 'T9UTsU4S11M',
-    youtubeViewCount: 10,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/how-genai-gets-smarter-the-power-of-context-with-rag-313h', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EXHxx0j5K9dLt6XuW5BzPpwBPm9BhtDqN2Yr8qGjF2p7MA?e=XoClQd', type: 'ppt' },
@@ -56,7 +53,6 @@ export const mockEvents: Event[] = [
     description: '🧠 Introduction to Data | Data Cleaning From Scratch - Episode 4 ',
     longDescription: 'Episode 4 of "Data Cleaning From Scratch" dives into the fundamentals of data what it is types, and why its crucial.This episode lays the groundwork for understanding why clean, accurate data is essential for analysis, decision-making, and building reliable machine learning models.This video is for beginners who want to get started in Data Cleaning',
     youtubeVideoId: '9CAG4Szod3U',
-    youtubeViewCount: 12,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/clean-data-clear-insights-your-first-step-into-data-science-3p25', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/Ef4DkMKC1vlPmrX8Dohuy-0BaG5ap9APB4SQDwJS6jbWKQ?e=09A1pV', type: 'ppt' },
@@ -67,17 +63,46 @@ export const mockEvents: Event[] = [
   },
   {
     id: 'event-5',
-    title: 'No Code ML Made with Clipchamp',
+    title: 'Intro to No Code App Dev and ML',
     date: '2025-07-02',
     description: '🧠 Introduction to No Code | NO Code ML From Scratch - Episode 5 ',
     longDescription: 'Build your first machine learning model without writing a single line of code using Azure Machine Learning Studio! In this quick guide, we’ll show you how to upload data, train a model, and deploy it – all through a simple drag-and-drop interface.This video is for beginners who want to get started in No Code',
     youtubeVideoId: 'X4-U1Pc3gk4',
-    youtubeViewCount: 13,
     resources: [
       { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/smart-vision-no-code-app-dev-without-writing-a-single-line-5dpm', type: 'blog' },
       { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/leerish_arvind_studentambassadors_com/EaVP_Q_vAKJFlKL9rcccrrkB9ONnx82gB2f-Z7moZuB5VQ?e=EW3Xk7', type: 'ppt' },
     ],
     tags: ['Machine Learning', 'Past Event', 'Tech Talk'],
+    imageUrl: '/logo.jpg',
+    imageHint: 'language processing'
+  },
+  {
+    id: 'event-6',
+    title: 'Resume 101 | Build your resume',
+    date: '2025-07-06',
+    description: '🧠 Build your first resume | With Copilot and Overleaf - Episode 6 ',
+    longDescription: 'Are you a student looking to create a powerful, user-friendly resume that stands out? In this video, We’ll show you how we used GitHub Copilot, your AI coding assistant, to build a modern resume effortlessly without any hustles. Whether you are a beginner this video will be a super saver to pitch before recruiters.',
+    youtubeVideoId: 'llrzAJIt708',
+    resources: [
+      { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/pitch-yourself-for-jobs-set-up-your-tech-profiles-right-2833', type: 'blog' },
+      { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EZN1P6zW3dJJiYPOiZNvX_EBcxSnAXJA_TrWZ3DvODD8Vg?e=PK7dOI', type: 'ppt' },
+    ],
+    tags: ['Resume', 'Past Event', 'Tech Talk'],
+    imageUrl: '/logo.jpg',
+    imageHint: 'language processing'
+  },
+  {
+    id: 'event-7',
+    title: 'AI that understands human language',
+    date: '2025-07-8',
+    description: '🧠 Introduction to NLP | AI With NLP - Episode 7 ',
+    longDescription: 'Ever wondered how Alexa understands you? Or how ChatGPT can talk like a human? In this video, we’re diving into the magical world of Natural Language Processing (NLP) — the AI that bridges language and machines! It covers Key concepts in NLP . Perfect for students, AI newbies, and tech enthusiasts curious about the power behind language-driven AI tools.',
+    youtubeVideoId: 'Sd0rNiY2TnA',
+    resources: [
+      { name: 'Read the Blog', url: 'https://dev.to/theaccessibleaihub/talk-to-code-kickstarting-your-nlp-journey-with-microsoft-ai-3dlf', type: 'blog' },
+      { name: 'Access the Deck', url: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EdXL7c49IjVHg9pNq7W2if8BsCYj4FrAOY-MV3VQBbVd9g?e=plOONU', type: 'ppt' },
+    ],
+    tags: ['Resume', 'Past Event', 'Tech Talk'],
     imageUrl: '/logo.jpg',
     imageHint: 'language processing'
   },
@@ -137,6 +162,28 @@ export const mockResources: Resource[] = [
     type: 'ppt',
     tags: ['Data Cleaning', 'Machine Learning', 'Beginner'],
     imageUrl: '/Banner5.png',
+    imageHint: 'Hi diagram'
+  },
+   {
+    id: 'res-6',
+    title: 'Resume 101 | Build your resume',
+    description: 'A comprehensive guide for beginners to understand the fundamentals of building a resume',
+    category: 'Resume Basics',
+    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EZN1P6zW3dJJiYPOiZNvX_EBcxSnAXJA_TrWZ3DvODD8Vg?e=PK7dOI',
+    type: 'ppt',
+    tags: ['Resume', 'CV', 'Beginner'],
+    imageUrl: '/Banner6.png',
+    imageHint: 'Hi diagram'
+  },
+   {
+    id: 'res-7',
+    title: 'AI that understands human language',
+    description: 'A comprehensive guide for beginners to understand the fundamentals of NLP and AI',
+    category: 'AI Basics',
+    downloadUrl: 'https://stdntpartners-my.sharepoint.com/:p:/g/personal/kalyanasundaram_v_studentambassadors_com/EdXL7c49IjVHg9pNq7W2if8BsCYj4FrAOY-MV3VQBbVd9g?e=plOONU',
+    type: 'ppt',
+    tags: ['NLP', 'AI', 'Beginner'],
+    imageUrl: '/Banner7.png',
     imageHint: 'Hi diagram'
   },
 ];

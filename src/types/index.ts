@@ -11,7 +11,7 @@ export interface Event {
   description: string;
   longDescription?: string;
   youtubeVideoId?: string;
-  youtubeViewCount?: number; // Added for displaying view counts
+  youtubeViewCount?: number;
   resources?: EventResource[];
   tags: string[];
   imageUrl?: string;
@@ -31,16 +31,17 @@ export interface Resource {
 }
 
 export interface TeamMember {
-  linkedinUrl: any;
   id: string;
   name: string;
   role: string;
   bio: string;
   imageUrl?: string;
   imageHint?: string;
+  linkedinUrl?: string;
 }
+
 export interface Testimonial {
-  id: string;
+  id:string;
   name: string;
   role: string;
   testimonial: string;

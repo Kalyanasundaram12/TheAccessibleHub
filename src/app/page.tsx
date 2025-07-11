@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { mockEvents } from '@/data/mock-data';
 import { EventCard } from '@/components/cards/event-card';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Users, DownloadCloud, CalendarCheck } from 'lucide-react';
 
 export default function HomePage() {
   const featuredEvents = mockEvents.filter(event => new Date(event.date) > new Date()).slice(0, 3);
@@ -32,6 +32,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="relative py-20 rounded-lg overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,0.3)_0%,transparent_70%)]"></div>
+        <div className="relative container mx-auto text-center px-4">
+            <h2 className="text-3xl font-bold font-headline mb-4 text-foreground">Our Community Impact</h2>
+            <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">We are a growing community dedicated to making AI accessible to everyone.</p>
+            <div className="flex justify-center">
+                <div className="relative group w-full max-w-md">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div className="relative p-8 bg-card/80 backdrop-blur-md rounded-xl shadow-xl border border-border/20">
+                      <div className="flex justify-center items-center mb-4">
+                        <div className="p-3 bg-accent/20 rounded-full">
+                          <Users className="h-12 w-12 text-accent drop-shadow-[0_0_8px_hsl(var(--accent))]"/>
+                        </div>
+                      </div>
+                      <p 
+                        className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground"
+                        style={{textShadow: '0 2px 4px rgba(0,0,0,0.2)'}}
+                      >
+                        500+
+                      </p>
+                      <p className="text-xl text-foreground/80 mt-2 font-headline tracking-wide">
+                        AAH Memberships
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
       <section>
         <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Featured Upcoming Events</h2>
         {featuredEvents.length > 0 ? (

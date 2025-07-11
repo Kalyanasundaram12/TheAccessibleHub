@@ -150,3 +150,12 @@ body {
   .font-scale-lg { font-size: 1.125rem; } /* 18px */
   .font-scale-xl { font-size: 1.25rem; } /* 20px */
 }
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

@@ -15,6 +15,8 @@ import { useState, useEffect } from 'react';
 import { suggestEventTags } from '@/ai/flows/suggest-event-tags';
 import { summarizeContent } from '@/ai/flows/summarize-content-flow';
 import { useToast } from '@/hooks/use-toast';
+import { getYouTubeViewCount } from '@/app/actions/youtubeActions';
+import { Skeleton } from '../ui/skeleton';
 
 interface EventCardProps {
   event: Event;
@@ -30,9 +32,12 @@ export function EventCard({ event, featured = false }: EventCardProps) {
   
   const [aiSummary, setAiSummary] = useState<string | null>(null);
   const [isSummarizing, setIsSummarizing] = useState(false);
-
+  
   const [formattedEventDate, setFormattedEventDate] = useState<string | null>(null);
   const [isEventUpcoming, setIsEventUpcoming] = useState<boolean | null>(null);
+
+  const [youtubeViewCount, setYoutubeViewCount] = useState<number | null>(null);
+  const [isLoadingViews, setIsLoadingViews] = useState(false);
 
   useEffect(() => {
     // This effect runs only on the client after hydration
@@ -41,11 +46,19 @@ export function EventCard({ event, featured = false }: EventCardProps) {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
     }));
     setIsEventUpcoming(date > new Date());
-  }, [event.date]);
+
+    if (event.youtubeVideoId && !featured) {
+      const fetchViewCount = async () => {
+        setIsLoadingViews(true);
+        const views = await getYouTubeViewCount(event.youtubeVideoId!);
+        setYoutubeViewCount(views);
+        setIsLoadingViews(false);
+      };
+      fetchViewCount();
+    }
+  }, [event.date, event.youtubeVideoId, featured]);
 
   const handleResourceDownloadClick = (resource: EventResource) => {
     incrementDownloadCount();
@@ -139,12 +152,18 @@ export function EventCard({ event, featured = false }: EventCardProps) {
           <div>
             <div className="flex justify-between items-center mb-2">
               <h3 className="text-md font-semibold flex items-center"><Youtube className="mr-2 h-5 w-5 text-red-600"/> Session Recording</h3>
-              {event.youtubeViewCount !== undefined && (
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Eye className="mr-1.5 h-4 w-4" />
-                  {event.youtubeViewCount.toLocaleString()} views
-                </div>
-              )}
+              <div className="flex items-center text-sm text-muted-foreground">
+                {isLoadingViews ? (
+                  <Skeleton className="h-4 w-16" />
+                ) : (
+                  youtubeViewCount !== null && (
+                    <>
+                      <Eye className="mr-1.5 h-4 w-4" />
+                      {youtubeViewCount.toLocaleString()} views
+                    </>
+                  )
+                )}
+              </div>
             </div>
             <YouTubeEmbed videoId={event.youtubeVideoId} title={event.title} />
           </div>
