@@ -1,7 +1,8 @@
+
 export interface EventResource {
   name: string;
   url: string;
-  type: 'ppt' | 'pdf' | 'notes' | 'link' | 'blog';
+  type: 'ppt' | 'pdf' | 'notes' | 'link'| 'blog';
 }
 
 export interface Event {
@@ -47,4 +48,13 @@ export interface Testimonial {
   testimonial: string;
   imageUrl: string;
   imageHint?: string;
+}
+
+export interface Podcast {
+    id: string;
+    title: string;
+    episodeNumber: number;
+    description: string;
+    youtubeVideoId: string;
+    spotifyUrl: string;
 }

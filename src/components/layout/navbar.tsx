@@ -4,10 +4,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Home, Info, CalendarDays, Library, Mail, Quote, Menu } from 'lucide-react';
+import { Home, Info, CalendarDays, Library, Mail, Quote, Menu, Mic } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/events', label: 'Events', icon: CalendarDays },
   { href: '/resources', label: 'Resources', icon: Library },
   { href: '/testimonials', label: 'Testimonials', icon: Quote },
+  { href: '/podcasts', label: 'Podcasts', icon: Mic },
   { href: '/contact', label: 'Contact', icon: Mail },
 ];
 
@@ -27,47 +28,32 @@ const SiteLogoAndTitle = () => (
       viewBox="0 0 100 100"
       className="h-8 w-8"
     >
-      {/* Brain Part (Left) */}
       <path 
         d="M45 15 C30 10, 15 20, 15 35 C15 50, 20 60, 25 70 C30 80, 40 85, 48 75 C55 68, 52 55, 48 45 C45 35, 50 25, 45 15 Z" 
         stroke="hsl(var(--foreground))" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"
       />
-      {/* Brain Nodes */}
       <circle cx="30" cy="30" r="3.5" fill="hsl(var(--foreground))" />
       <circle cx="25" cy="50" r="3.5" fill="hsl(var(--foreground))" />
       <circle cx="35" cy="65" r="3.5" fill="hsl(var(--foreground))" />
       <circle cx="40" cy="25" r="3.5" fill="hsl(var(--foreground))" />
       <circle cx="45" cy="50" r="3.5" fill="hsl(var(--foreground))" />
-
-      {/* Connecting Lines from Brain to Central Circle */}
       <line x1="40" y1="25" x2="55" y2="35" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <line x1="45" y1="50" x2="58" y2="50" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <line x1="35" y1="65" x2="55" y2="60" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
-
-      {/* Central Circle (for accessibility icon) */}
-      <circle cx="70" cy="50" r="18" stroke="hsl(var(--destructive))" strokeWidth="4" fill="none" />
-
-      {/* Accessibility Icon (inside central circle) */}
-      <circle cx="70" cy="40" r="5" fill="hsl(var(--destructive))" /> {/* Head */}
-      <line x1="70" y1="46" x2="70" y2="60" stroke="hsl(var(--destructive))" strokeWidth="5" strokeLinecap="round" /> {/* Body */}
-      <line x1="60" y1="50" x2="80" y2="50" stroke="hsl(var(--destructive))" strokeWidth="5" strokeLinecap="round" /> {/* Arms */}
-      <line x1="70" y1="60" x2="62" y2="70" stroke="hsl(var(--destructive))" strokeWidth="5" strokeLinecap="round" /> {/* Left Leg */}
-      <line x1="70" y1="60" x2="78" y2="70" stroke="hsl(var(--destructive))" strokeWidth="5" strokeLinecap="round" /> {/* Right Leg */}
-
-      {/* Radiating lines/nodes from central part */}
-      {/* Top-Right Spoke */}
+      <circle cx="70" cy="50" r="18" stroke="hsl(var(--accent))" strokeWidth="4" fill="none" />
+      <circle cx="70" cy="40" r="5" fill="hsl(var(--accent))" />
+      <line x1="70" y1="46" x2="70" y2="60" stroke="hsl(var(--accent))" strokeWidth="5" strokeLinecap="round" />
+      <line x1="60" y1="50" x2="80" y2="50" stroke="hsl(var(--accent))" strokeWidth="5" strokeLinecap="round" />
+      <line x1="70" y1="60" x2="62" y2="70" stroke="hsl(var(--accent))" strokeWidth="5" strokeLinecap="round" />
+      <line x1="70" y1="60" x2="78" y2="70" stroke="hsl(var(--accent))" strokeWidth="5" strokeLinecap="round" />
       <line x1="82" y1="28" x2="88" y2="22" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <circle cx="90" cy="20" r="3.5" fill="hsl(var(--foreground))" />
-      {/* Right Spoke */}
       <line x1="88" y1="50" x2="95" y2="50" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <circle cx="97" cy="50" r="3.5" fill="hsl(var(--foreground))" />
-      {/* Bottom-Right Spoke */}
       <line x1="82" y1="72" x2="88" y2="78" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <circle cx="90" cy="80" r="3.5" fill="hsl(var(--foreground))" />
-      {/* Bottom-Mid Spoke (from central red circle) */}
       <line x1="70" y1="68" x2="70" y2="78" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <circle cx="70" cy="81.5" r="3.5" fill="hsl(var(--foreground))" />
-        {/* Top-Mid Spoke (from central red circle) */}
       <line x1="70" y1="32" x2="70" y2="22" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinecap="round" />
       <circle cx="70" cy="18.5" r="3.5" fill="hsl(var(--foreground))" />
     </svg>
@@ -78,13 +64,26 @@ const SiteLogoAndTitle = () => (
 export function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-card shadow-md sticky top-0 z-50">
+    <header className={cn(
+        "sticky top-0 z-50 transition-all duration-300",
+        isScrolled ? "bg-card shadow-md" : "bg-transparent"
+    )}>
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
         <SiteLogoAndTitle />
 
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-1 sm:space-x-2 md:space-x-4">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -104,7 +103,6 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Navigation */}
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -113,7 +111,7 @@ export function Navbar() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[320px] p-0">
+            <SheetContent side="right" className="w-[280px] sm:w-[320px] p-0 bg-card">
               <SheetHeader className="p-4 border-b text-left">
                 <SheetTitle>
                   <SiteLogoAndTitle />

@@ -1,4 +1,4 @@
-import type { Event, Resource, TeamMember, Testimonial } from '@/types';
+import type { Event, Podcast, Resource, TeamMember, Testimonial } from '@/types';
 
 export const mockEvents: Event[] = [
   {
@@ -259,4 +259,23 @@ export const mockTestimonials: Testimonial[] = [
   //   imageUrl: 'https://placehold.co/100x100.png',
   //   imageHint: 'portrait man student'
   // }
+];
+
+export const mockPodcasts: Podcast[] = [
+  {
+    id: 'pod-1',
+    title: 'Breaking into MNC : Sam Prince Franklin’s Real Story from College to Core Tech',
+    episodeNumber: 1,
+    description: 'This week on How I Cracked It, we dive deep with Sam Prince Franklin, who shares his no-fluff journey to landing a core tech role at MNC.',
+    youtubeVideoId: '594t4126auU',
+    spotifyUrl: 'https://open.spotify.com/episode/4R1ZJEBss1YjNAbMA0dViK?si=dfHMUW7gTgeD844lvXc0WQ',
+  },
+  // {
+  //   id: 'pod-2',
+  //   title: 'AI in Healthcare',
+  //   episodeNumber: 2,
+  //   description: 'Exploring the revolutionary applications of AI in diagnostics, drug discovery, and personalized medicine.',
+  //   youtubeVideoId: '3qo-EMFCB4s',
+  //   spotifyUrl: 'https://open.spotify.com/episode/3q8B5QJ8Z4ZJgY9Z1X2X3Y',
+  // },
 ];
