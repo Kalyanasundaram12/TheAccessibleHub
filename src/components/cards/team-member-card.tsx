@@ -11,7 +11,7 @@ interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="text-center hover:shadow-lg transition-shadow duration-300 flex flex-col">
+    <Card className="text-center flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]">
       <CardHeader className="items-center">
         {member.imageUrl && (
           <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4 shadow-md">

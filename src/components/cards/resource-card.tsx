@@ -80,7 +80,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
   const allDisplayTags = Array.from(new Set([...resource.tags, ...userAddedAiTags]));
 
   return (
-    <Card className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]">
       {resource.imageUrl && (
          <div className="relative w-full h-40">
           <Image

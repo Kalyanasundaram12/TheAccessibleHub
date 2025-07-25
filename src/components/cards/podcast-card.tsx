@@ -46,7 +46,7 @@ export function PodcastCard({ podcast }: PodcastCardProps) {
   }, [podcast.youtubeVideoId]);
 
   return (
-    <Card className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]">
       <CardHeader>
         <CardTitle className="text-xl font-headline">{podcast.title}</CardTitle>
         <div className="flex justify-between items-center">

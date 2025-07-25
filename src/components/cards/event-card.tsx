@@ -115,7 +115,7 @@ export function EventCard({ event, featured = false }: EventCardProps) {
   const displayDescription = featured ? event.description : (event.description.length > 100 ? event.description.substring(0, 100) + "..." : event.description);
 
   return (
-    <Card className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]">
       {event.imageUrl && (
         <div className="relative w-full h-48">
           <Image

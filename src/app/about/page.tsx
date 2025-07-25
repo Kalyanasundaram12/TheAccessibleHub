@@ -37,7 +37,7 @@ export default function AboutPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Meet Our Team</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Meet our Founders</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mockTeamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
@@ -46,7 +46,7 @@ export default function AboutPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Our Associates</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Our Team</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mockAssociates.map((associate) => (
             <TeamMemberCard key={associate.id} member={associate} />

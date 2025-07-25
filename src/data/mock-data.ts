@@ -232,6 +232,20 @@ export const mockAssociates: TeamMember[] = [
     bio: 'Sanjana is a Beta MLSA and an Associate at The Accessible AI Hub',
     linkedinUrl: 'https://www.linkedin.com/in/kavala-sri-lakshmi-sanjana'
   },
+  {
+    id: 'assoc-3',
+    name: 'Suryakumar P',
+    role: 'MLSA Beta',
+    bio: 'Surya is a Beta MLSA and an Associate at The Accessible AI Hub',
+    linkedinUrl: 'https://www.linkedin.com/in/suryakumarp'
+  },
+  {
+    id: 'assoc-4',
+    name: 'Nishanth C',
+    role: 'MLSA Beta',
+    bio: 'Nishanth is a Beta MLSA and an Associate at The Accessible AI Hub',
+    linkedinUrl: 'https://www.linkedin.com/in/nishanth-chandrasekaran'
+  },
   
 ];
 export const mockTestimonials: Testimonial[] = [
