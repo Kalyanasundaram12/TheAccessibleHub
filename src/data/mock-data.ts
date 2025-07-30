@@ -123,18 +123,21 @@ export const mockOfflineEvents: OfflineEvent[] = [
       '/6.jpg',
     ],
   },
-  // {
-  //   id: 'offline-event-2',
-  //   name: 'Community AI Workshop: Build Your First Model',
-  //   location: 'New York, NY',
-  //   date: '2024-09-15T10:00:00Z',
-  //   description: 'A hands-on workshop for beginners. No prior experience needed! Our experts will guide you through building a simple machine learning model from scratch.',
-  //   imageUrls: [
-  //     'https://placehold.co/600x400.png',
-  //     'https://placehold.co/600x400.png',
-  //     'https://placehold.co/600x400.png',
-  //   ],
-  // },
+  {
+    id: 'offline-event-2',
+    name: 'Freshers Gateway for Azure Services',
+    location: 'Kamaraj Auditorium,VIT Chennai',
+    date: '2024-07-29',
+    description: 'Freshers Gateway for Azure Services was an engaging introductory session designed to help students kickstart their journey into the world of cloud computing with Microsoft Azure. The event focused on exploring core Azure services, the benefits of the Azure for Students program, and a hands-on walkthrough of Azure Custom Vision a powerful tool that allows users to build and deploy custom image classification models effortlessly. Aimed at freshers and tech enthusiasts, the session offered practical insights, live demonstrations, and valuable resources to empower attendees in building intelligent, cloud-based solutions.',
+    imageUrls: [
+      '/7.jpg',
+      '/8.jpg',
+      '/9.jpg',
+      '/10.jpg',
+      '/11.jpg',
+      '/12.jpg',
+    ],
+  },
   //  {
   //   id: 'offline-event-3',
   //   name: 'The Ethics of AI: A Community Discussion',
