@@ -15,15 +15,15 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6 text-primary">
             Welcome to The Accessible AI Hub
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 mb-4 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-foreground/80 mb-4 max-w-3xl mx-auto font-headline">
             Prompt your path
           </p>
           <p className="text-md text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Explore events, resources, and join a community passionate about democratizing AI knowledge.
+            Explore works, resources, and join a community passionate about democratizing AI knowledge.
           </p>
           <div className="space-x-4">
             <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/events">Explore Events</Link>
+              <Link href="/works">Explore Works</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/about">Learn More</Link>
@@ -62,7 +62,7 @@ export default function HomePage() {
       </section>
       
       <section>
-        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Featured Upcoming Events</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-8 text-center">Featured Upcoming Works</h2>
         {featuredEvents.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredEvents.map((event) => (
@@ -70,12 +70,12 @@ export default function HomePage() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-muted-foreground">No upcoming events featured at the moment. Check back soon!</p>
+          <p className="text-center text-muted-foreground">No upcoming works featured at the moment. Check back soon!</p>
         )}
         <div className="text-center mt-8">
-          <Button variant="link" asChild className="text-primary hover:text-primary/80">
-            <Link href="/events">
-              View All Events <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant="link" asChild className="text-primary hover:text-primary/80 group-hover:translate-x-0">
+            <Link href="/works">
+              View All Works <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
@@ -83,3 +83,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

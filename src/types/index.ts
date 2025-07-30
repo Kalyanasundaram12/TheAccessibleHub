@@ -2,7 +2,7 @@
 export interface EventResource {
   name: string;
   url: string;
-  type: 'ppt' | 'pdf' | 'notes' | 'link'| 'blog';
+  type: 'ppt' | 'pdf' | 'notes' | 'link' | 'blog';
 }
 
 export interface Event {
@@ -57,4 +57,13 @@ export interface Podcast {
     description: string;
     youtubeVideoId: string;
     spotifyUrl: string;
+}
+
+export interface OfflineEvent {
+  id: string;
+  name: string;
+  location: string;
+  date: string; // ISO 8601 format
+  description: string;
+  imageUrls: string[];
 }

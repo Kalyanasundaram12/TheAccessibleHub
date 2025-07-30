@@ -1,7 +1,6 @@
 
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { CalendarDays, Download, Youtube, Tag, Sparkles, PlusCircle, TextQuote, Eye } from 'lucide-react';
 import type { Event, EventResource } from '@/types';
@@ -115,16 +114,10 @@ export function EventCard({ event, featured = false }: EventCardProps) {
   const displayDescription = featured ? event.description : (event.description.length > 100 ? event.description.substring(0, 100) + "..." : event.description);
 
   return (
-    <Card className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]">
-      {event.imageUrl && (
-        <div className="relative w-full h-48">
-          <Image
-            src={event.imageUrl}
-            alt={event.title}
-            fill
-            className="object-cover"
-            data-ai-hint={event.imageHint || "event image"}
-          />
+    <Card className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)] hover:border-primary/50">
+      {event.youtubeVideoId && (
+        <div className="relative w-full aspect-video">
+          <YouTubeEmbed videoId={event.youtubeVideoId} title={event.title} />
         </div>
       )}
       <CardHeader>
@@ -148,24 +141,20 @@ export function EventCard({ event, featured = false }: EventCardProps) {
           </div>
         )}
         
-        {event.youtubeVideoId && !featured && (
-          <div>
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="text-md font-semibold flex items-center"><Youtube className="mr-2 h-5 w-5 text-red-600"/> Session Recording</h3>
-              <div className="flex items-center text-sm text-muted-foreground">
-                {isLoadingViews ? (
-                  <Skeleton className="h-4 w-16" />
-                ) : (
-                  youtubeViewCount !== null && (
-                    <>
-                      <Eye className="mr-1.5 h-4 w-4" />
-                      {youtubeViewCount.toLocaleString()} views
-                    </>
-                  )
-                )}
-              </div>
+        {!featured && (
+          <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center text-sm text-muted-foreground">
+              {isLoadingViews ? (
+                <Skeleton className="h-4 w-16" />
+              ) : (
+                youtubeViewCount !== null && (
+                  <>
+                    <Eye className="mr-1.5 h-4 w-4" />
+                    {youtubeViewCount.toLocaleString()} views
+                  </>
+                )
+              )}
             </div>
-            <YouTubeEmbed videoId={event.youtubeVideoId} title={event.title} />
           </div>
         )}
 
@@ -267,7 +256,7 @@ export function EventCard({ event, featured = false }: EventCardProps) {
         )}
         {featured && (
            <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-             <Link href={`/events#${event.id}`}>View Event Details</Link>
+             <Link href={`/works#${event.id}`}>View Work Details</Link>
            </Button>
         )}
          {!featured && <Separator className="my-2" />}
@@ -275,3 +264,5 @@ export function EventCard({ event, featured = false }: EventCardProps) {
     </Card>
   );
 }
+
+    

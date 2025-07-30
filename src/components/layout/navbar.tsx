@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Home, Info, CalendarDays, Library, Mail, Quote, Menu, Mic } from 'lucide-react';
+import { Home, Info, Library, Mail, Quote, Menu, Mic, Briefcase } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import React, { useState, useEffect } from 'react';
@@ -12,8 +12,8 @@ import React, { useState, useEffect } from 'react';
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/about', label: 'About Us', icon: Info },
-  { href: '/events', label: 'Events', icon: CalendarDays },
-  { href: '/resources', label: 'Resources', icon: Library },
+  { href: '/works', label: 'Resources', icon: Briefcase },
+  { href: '/resources', label: 'Works', icon: Library },
   { href: '/testimonials', label: 'Testimonials', icon: Quote },
   { href: '/podcasts', label: 'Podcasts', icon: Mic },
   { href: '/contact', label: 'Contact', icon: Mail },
@@ -143,3 +143,5 @@ export function Navbar() {
     </header>
   );
 }
+
+    

@@ -1,4 +1,4 @@
-import type { Event, Podcast, Resource, TeamMember, Testimonial } from '@/types';
+import type { Event, OfflineEvent, Podcast, Resource, TeamMember, Testimonial } from '@/types';
 
 export const mockEvents: Event[] = [
   {
@@ -106,6 +106,47 @@ export const mockEvents: Event[] = [
     imageUrl: '/logo.jpg',
     imageHint: 'language processing'
   },
+];
+export const mockOfflineEvents: OfflineEvent[] = [
+  {
+    id: 'offline-event-1',
+    name: 'Github Copilot Global Bootcamp 2025',
+    location: 'St Josephs College Of Engineering',
+    date: '2024-07-12',
+    description: 'The Department of Artificial Intelligence and Data Science at St. Joseph s Institute of Technology, OMR Chennai, organised the GitHub Copilot Global Bootcamp – 2025 as part of a global initiative to familiarise students and developers with the capabilities of AI-powered coding tools. The event featured technical sessions that explored how GitHub Copilot can enhance productivity, streamline Python project development, and support paired programming.',
+    imageUrls: [
+      '/1.jpg',
+      '/2.jpg',
+      '/3.jpg',
+      '/4.jpg',
+      '/5.jpg',
+      '/6.jpg',
+    ],
+  },
+  // {
+  //   id: 'offline-event-2',
+  //   name: 'Community AI Workshop: Build Your First Model',
+  //   location: 'New York, NY',
+  //   date: '2024-09-15T10:00:00Z',
+  //   description: 'A hands-on workshop for beginners. No prior experience needed! Our experts will guide you through building a simple machine learning model from scratch.',
+  //   imageUrls: [
+  //     'https://placehold.co/600x400.png',
+  //     'https://placehold.co/600x400.png',
+  //     'https://placehold.co/600x400.png',
+  //   ],
+  // },
+  //  {
+  //   id: 'offline-event-3',
+  //   name: 'The Ethics of AI: A Community Discussion',
+  //   location: 'London, UK',
+  //   date: '2024-10-05T18:00:00Z',
+  //   description: 'Join us for an evening of thoughtful discussion on the ethical implications of artificial intelligence. Featuring a panel of experts and an open Q&A session.',
+  //   imageUrls: [
+  //     'https://placehold.co/600x400.png',
+  //     'https://placehold.co/600x400.png',
+  //     'https://placehold.co/600x400.png',
+  //   ],
+  // },
 ];
 
 export const mockResources: Resource[] = [

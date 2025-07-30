@@ -15,7 +15,7 @@ export default function WorksPage() {
   return (
     <div className="space-y-12">
       <section className="text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold font-headline mb-4 text-primary">Works</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold font-headline mb-4 text-primary">Resources</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Join our workshops, talks, and panel discussions. All works are designed to be accessible and informative.
         </p>
@@ -57,3 +57,5 @@ export default function WorksPage() {
     </div>
   );
 }
+
+    

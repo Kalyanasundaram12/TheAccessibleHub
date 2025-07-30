@@ -8,7 +8,6 @@ import type { Resource } from '@/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { incrementDownloadCount } from '@/lib/tracking';
 import { useState, type FC } from 'react';
 import { suggestResourceTags } from '@/ai/flows/suggest-resource-tags';
 import { summarizeContent } from '@/ai/flows/summarize-content-flow';
@@ -27,10 +26,6 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
   const [aiSummary, setAiSummary] = useState<string | null>(null);
   const [isSummarizing, setIsSummarizing] = useState(false);
-
-  const handleDownloadClick = () => {
-    incrementDownloadCount();
-  };
 
   const handleSuggestAiTags = async () => {
     setIsSuggestingAiTags(true);
@@ -106,7 +101,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
             <p className="text-xs italic">{aiSummary}</p>
           </div>
         )}
-         <Button asChild variant="outline" className="w-full" onClick={handleDownloadClick}>
+         <Button asChild variant="outline" className="w-full">
             <Link href={resource.downloadUrl} target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-4 w-4" /> Download ({resource.type.toUpperCase()})
             </Link>
