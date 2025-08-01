@@ -112,7 +112,7 @@ export const mockOfflineEvents: OfflineEvent[] = [
     id: 'offline-event-1',
     name: 'Github Copilot Global Bootcamp 2025',
     location: 'St Josephs College Of Engineering',
-    date: '2024-07-12',
+    date: '2025-07-12',
     description: 'The Department of Artificial Intelligence and Data Science at St. Joseph s Institute of Technology, OMR Chennai, organised the GitHub Copilot Global Bootcamp – 2025 as part of a global initiative to familiarise students and developers with the capabilities of AI-powered coding tools. The event featured technical sessions that explored how GitHub Copilot can enhance productivity, streamline Python project development, and support paired programming.',
     imageUrls: [
       '/01.jpg',
@@ -127,7 +127,7 @@ export const mockOfflineEvents: OfflineEvent[] = [
     id: 'offline-event-2',
     name: 'Freshers Gateway for Azure Services',
     location: 'Kamaraj Auditorium,VIT Chennai',
-    date: '2024-07-29',
+    date: '2025-07-29',
     description: 'Freshers Gateway for Azure Services was an engaging introductory session designed to help students kickstart their journey into the world of cloud computing with Microsoft Azure. The event focused on exploring core Azure services, the benefits of the Azure for Students program, and a hands-on walkthrough of Azure Custom Vision a powerful tool that allows users to build and deploy custom image classification models effortlessly. Aimed at freshers and tech enthusiasts, the session offered practical insights, live demonstrations, and valuable resources to empower attendees in building intelligent, cloud-based solutions.',
     imageUrls: [
       '/7.jpg',
