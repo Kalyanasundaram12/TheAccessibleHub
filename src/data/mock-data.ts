@@ -115,12 +115,12 @@ export const mockOfflineEvents: OfflineEvent[] = [
     date: '2024-07-12',
     description: 'The Department of Artificial Intelligence and Data Science at St. Joseph s Institute of Technology, OMR Chennai, organised the GitHub Copilot Global Bootcamp – 2025 as part of a global initiative to familiarise students and developers with the capabilities of AI-powered coding tools. The event featured technical sessions that explored how GitHub Copilot can enhance productivity, streamline Python project development, and support paired programming.',
     imageUrls: [
-      '/1.jpg',
-      '/2.jpg',
-      '/3.jpg',
-      '/4.jpg',
-      '/5.jpg',
-      '/6.jpg',
+      '/01.jpg',
+      '/02.jpg',
+      '/03.jpg',
+      '/04.jpg',
+      '/05.jpg',
+      '/06.jpg',
     ],
   },
   {
