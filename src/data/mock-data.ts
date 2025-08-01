@@ -328,12 +328,12 @@ export const mockPodcasts: Podcast[] = [
     youtubeVideoId: '594t4126auU',
     spotifyUrl: 'https://open.spotify.com/episode/4R1ZJEBss1YjNAbMA0dViK?si=dfHMUW7gTgeD844lvXc0WQ',
   },
-  // {
-  //   id: 'pod-2',
-  //   title: 'AI in Healthcare',
-  //   episodeNumber: 2,
-  //   description: 'Exploring the revolutionary applications of AI in diagnostics, drug discovery, and personalized medicine.',
-  //   youtubeVideoId: '3qo-EMFCB4s',
-  //   spotifyUrl: 'https://open.spotify.com/episode/3q8B5QJ8Z4ZJgY9Z1X2X3Y',
-  // },
+  {
+    id: 'pod-2',
+    title: 'From VIT to NYU: Srivats’ Ongoing Master’s Journey Why Masters Instead of Placements?',
+    episodeNumber: 2,
+    description: 'In this inspiring episode, we follow Srivats’ remarkable journey from the vibrant classrooms of (VIT) to the global academic stage of New York University (NYU).',
+    youtubeVideoId: 'xLhkcxWNv44',
+    spotifyUrl: 'https://open.spotify.com/episode/2bOFlTkPPqphcBwS9xWlNZ?si=49H24jVDS_mycmo1kmAesA',
+  },
 ];
