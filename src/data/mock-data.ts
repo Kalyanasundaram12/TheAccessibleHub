@@ -338,7 +338,7 @@ export const mockPodcasts: Podcast[] = [
   },
   {
     id: 'pod-3',
-    title: 'How I got into a Business Major at UNSW, Australia - Journey of Saravanan Balaji',
+    title: 'How I got into a Business Major at UNSW, Australia - Journey of Saravanan Balaji!',
     episodeNumber: 3,
     description: 'Hear from Saravanan Balaji on his journey from Engineering at VIT to International Business at the University of New South Wales. From VIT to UNSW University.',
     youtubeVideoId: 'ur2nblPs0yA',
