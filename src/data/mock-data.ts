@@ -336,4 +336,12 @@ export const mockPodcasts: Podcast[] = [
     youtubeVideoId: 'xLhkcxWNv44',
     spotifyUrl: 'https://open.spotify.com/episode/2bOFlTkPPqphcBwS9xWlNZ?si=49H24jVDS_mycmo1kmAesA',
   },
+  {
+    id: 'pod-3',
+    title: 'How I got into a Business Major at UNSW, Australia - Journey of Saravanan Balaji',
+    episodeNumber: 3,
+    description: 'Hear from Saravanan Balaji on his journey from Engineering at VIT to International Business at the University of New South Wales. From VIT to UNSW University.',
+    youtubeVideoId: 'ur2nblPs0yA',
+    spotifyUrl: 'https://open.spotify.com/episode/4JvT8ut7dEEmYhuFDzA78u?si=4vmSRb4tS9WxB-qGXqOAlA',
+  },
 ];
