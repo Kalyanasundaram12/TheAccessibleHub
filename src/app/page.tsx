@@ -50,7 +50,7 @@ export default function HomePage() {
                         className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground"
                         style={{textShadow: '0 2px 4px rgba(0,0,0,0.2)'}}
                       >
-                        500+
+                        700+
                       </p>
                       <p className="text-xl text-foreground/80 mt-2 font-headline tracking-wide">
                         AAH Memberships
