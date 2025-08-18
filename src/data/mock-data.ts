@@ -344,4 +344,12 @@ export const mockPodcasts: Podcast[] = [
     youtubeVideoId: 'ur2nblPs0yA',
     spotifyUrl: 'https://open.spotify.com/episode/4JvT8ut7dEEmYhuFDzA78u?si=4vmSRb4tS9WxB-qGXqOAlA',
   },
+  {
+    id: 'pod-4',
+    title: 'Campus to Corporate: How Kalyan and Surya Landed their First Roles',
+    episodeNumber: 4,
+    description: 'In this episode, we sit down with Kalyan and Surya to talk about their real, unfiltered placement journey - from the early days of preparation to the rollercoaster of interviews, rejections, and finally securing their offers.',
+    youtubeVideoId: 'TqF3pAgiqBA',
+    spotifyUrl: 'https://open.spotify.com/episode/16ea3IfdMnsWlO4F4nrfWt?si=ggc6S2BZRECZhkc-LRHXZQ',
+  },
 ];
